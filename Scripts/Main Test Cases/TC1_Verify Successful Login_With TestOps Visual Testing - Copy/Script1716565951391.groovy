@@ -23,7 +23,7 @@ WebUI.comment('Story: Login to CURA system')
 
 WebUI.comment('Given that the user has the valid login information')
 
-WebUI.openBrowser(GlobalVariable.G_SiteURL)
+WebUI.openBrowser('http://demoaut.katalon.com')
 
 WebUI.maximizeWindow()
 
@@ -45,7 +45,7 @@ WebUI.click(findTestObject('Page_Login/btn_Login'))
 
 WebUI.comment('Then he should be able to login successfully')
 
-landingPage = WebUI.verifyElementPresent(findTestObject('Page_CuraAppointment/div_Appointment'), GlobalVariable.G_Timeout)
+landingPage = WebUI.verifyElementPresent(findTestObject('Page_CuraAppointment/div_Appointment'), 10)
 
 WebUI.closeBrowser()
 

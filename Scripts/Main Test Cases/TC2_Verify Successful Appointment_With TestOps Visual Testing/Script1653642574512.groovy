@@ -23,11 +23,12 @@ WebUI.comment('Story: Book an appointment')
 
 WebUI.comment('Given that the user has logged into their account')
 
-WebUI.openBrowser(GlobalVariable.G_SiteURL)
+WebUI.openBrowser('http://demoaut.katalon.com')
 
 WebUI.maximizeWindow()
 
-WebUI.callTestCase(findTestCase('Common Test Cases/Login'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Common Test Cases/Login'), [('Username') : 'John Doe', ('Password') : 'ThisIsNotAPassword'], 
+    FailureHandling.STOP_ON_FAILURE)
 
 WebUI.comment('And Appointment page is displayed')
 
@@ -47,7 +48,9 @@ WebUI.takeElementScreenshotAsCheckpoint('Medicare', MedicareChoicesObject)
 WebUI.check(findTestObject('Page_CuraAppointment/chk_Readmission'))
 
 WebUI.setText(findTestObject('Page_CuraAppointment/txt_VisitDate'), '27/12/2016')
-WebUI.click(CommentLabelObject) // just to hide date chooser
+
+WebUI.click(CommentLabelObject // just to hide date chooser
+    )
 
 // Check date with TestOps Visual Testing
 WebUI.takeElementScreenshotAsCheckpoint('Visit Date', DateObject)
@@ -58,7 +61,8 @@ WebUI.comment('When he fills in valid information in Appointment page')
 
 // Simulate dynamic content
 if (new Random().nextBoolean()) {
-	WebUI.executeJavaScript("document.querySelector(\"#appointment > div > div > div > h2\").textContent = \"Make New Appointment\"", null);
+    WebUI.executeJavaScript('document.querySelector("#appointment > div > div > div > h2").textContent = "Make New Appointment"', 
+        null)
 }
 
 // Check data with TestOps Visual Testing
@@ -73,7 +77,8 @@ WebUI.verifyTextPresent('Appointment Confirmation', false)
 
 WebUI.comment('Then he should be able to book a new appointment')
 
-WebUI.verifyMatch('Hongkong CURA Healthcare Center', WebUI.getText(findTestObject('Page_AppointmentConfirmation/lbl_Facility')), false)
+WebUI.verifyMatch('Hongkong CURA Healthcare Center', WebUI.getText(findTestObject('Page_AppointmentConfirmation/lbl_Facility')), 
+    false)
 
 WebUI.verifyMatch('Yes', WebUI.getText(findTestObject('Page_AppointmentConfirmation/lbl_HospitalReadmission')), false)
 
@@ -81,8 +86,8 @@ WebUI.verifyMatch('Medicaid', WebUI.getText(findTestObject('Page_AppointmentConf
 
 WebUI.verifyMatch('27/12/2016', WebUI.getText(findTestObject('Page_AppointmentConfirmation/lbl_VisitDate')), false)
 
-WebUI.verifyMatch('Please make appointment as soon as possible.', WebUI.getText(findTestObject('Page_AppointmentConfirmation/lbl_Comment')), false)
+WebUI.verifyMatch('Please make appointment as soon as possible.', WebUI.getText(findTestObject('Page_AppointmentConfirmation/lbl_Comment')), 
+    false)
 
 WebUI.closeBrowser()
-
 

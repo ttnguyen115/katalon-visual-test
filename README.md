@@ -1,0 +1,1 @@
+# katalon-visual-testing

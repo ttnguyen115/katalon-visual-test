@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login</description>
+   <name>TC1_Verify Successful Login_With TestOps Visual Testing - Copy (2)</name>
+   <tag></tag>
+   <comment>Story: Login to CURA system
+Given that the user has valid login information
+When he logins to CURA system
+Then he should be able to login successfully</comment>
+   <testCaseGuid>446f7a34-b443-4270-8027-26fd10d4d087</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>99fe9236-609f-45d7-9fb5-8de8427e98da</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f2d4ff80-377f-4358-b3c9-9f83a3d28a6a</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5e9dd03c-ff96-4d85-975c-1167b998b20d</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'John Doe'</defaultValue>
+      <description></description>
+      <id>99fe9236-609f-45d7-9fb5-8de8427e98da</id>
+      <masked>false</masked>
+      <name>Username</name>
+   </variable>
+   <variable>
+      <defaultValue>'ThisIsNotAPassword'</defaultValue>
+      <description></description>
+      <id>f2d4ff80-377f-4358-b3c9-9f83a3d28a6a</id>
+      <masked>false</masked>
+      <name>Password</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Vision_Common/Login_Dialog')</defaultValue>
+      <description></description>
+      <id>5e9dd03c-ff96-4d85-975c-1167b998b20d</id>
+      <masked>false</masked>
+      <name>LoginObject</name>
+   </variable>
+</TestCaseEntity>

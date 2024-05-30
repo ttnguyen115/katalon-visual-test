@@ -16,7 +16,6 @@ Given that the user has logged into their account
 And Appointment page is displayed
 When he fills in valid information in Appointment page
 Then he should be able to book a new appointment</comment>
-   <recordOption>OTHER</recordOption>
    <testCaseGuid>91fc3921-b4e3-4d62-9778-94b244f946ec</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

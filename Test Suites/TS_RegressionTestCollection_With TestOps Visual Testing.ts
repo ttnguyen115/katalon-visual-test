@@ -24,7 +24,7 @@
             <requireConfigurationData>false</requireConfigurationData>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/TS_RegressionTest_With TestOps Visual Testing</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>

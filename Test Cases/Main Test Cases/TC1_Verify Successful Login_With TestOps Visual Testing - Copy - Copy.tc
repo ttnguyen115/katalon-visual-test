@@ -15,7 +15,6 @@ Expected result:
 Given that the user has valid login information
 When he logins to CURA system
 Then he should be able to login successfully</comment>
-   <recordOption>OTHER</recordOption>
    <testCaseGuid>08f4b18d-0ece-4034-91e4-4a62508e8fc9</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
